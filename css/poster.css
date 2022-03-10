@@ -25,12 +25,49 @@ html {
     margin-top: 0.2rem;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(71, 59, 59, 0.616);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 5rem;
+    width: 600px;
+    height: 600px;
+    animation: zoom-in 1s;
+}
+
+@keyframes zoom-in {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+.movie-poster-modal {
+    width: 300px;
+}
+
+.closeBtn {
+    float: right;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
 .movie-poster-container img {
     margin-top: 2rem;
     height: 500px;
     border-radius: 5px;
     position: relative;
     left: -50rem;
+    cursor: pointer;
     animation: slide-from-left 3.5s ease-in-out forwards;
     transition: all 1s;
 }
@@ -44,6 +81,7 @@ html {
     transform: scale(1.1);
     box-shadow: 8px 8px 8px -4px grey;
 }
+
 
 .movie-rating {
     display: inline-block;
@@ -135,3 +173,4 @@ footer ul li a {
     text-decoration: none;
     color: #777;
 }
+ 
